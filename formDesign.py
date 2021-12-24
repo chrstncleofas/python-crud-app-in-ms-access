@@ -150,7 +150,7 @@ class studentForm:
     # Data Table 
     def dataList(self):
         try:
-            con = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=.\dbFolder\pydb.mdb;')
+            con = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=.\pydb.mdb;')
             cur = con.cursor()
             cur.execute("SELECT * FROM tblstudent")
             rows = cur.fetchall()
